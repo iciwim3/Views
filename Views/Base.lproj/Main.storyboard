@@ -20,7 +20,33 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jpY-w1-5lV">
+                                <rect key="frame" x="0.0" y="25" width="375" height="642"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="oyp-dF-a3S">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oyp-dF-a3S" id="olG-u0-o6B">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Nux-MZ-3mJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AWk-ho-XsV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jpY-w1-5lV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0jS-RB-Qen"/>
+                            <constraint firstAttribute="trailing" secondItem="jpY-w1-5lV" secondAttribute="trailing" id="Qf3-8j-mPA"/>
+                            <constraint firstAttribute="bottom" secondItem="jpY-w1-5lV" secondAttribute="bottom" id="cIc-XI-pS8"/>
+                            <constraint firstItem="jpY-w1-5lV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="25" id="y84-lX-4SU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
